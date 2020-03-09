@@ -1,0 +1,60 @@
+<style>
+    .main {
+        color: orange;
+    }
+</style>
+<link href="./index.css" rel="stylesheet" />
+<title> a  very basic html page</title>
+<!-- <base href="http://localhost:8081"> -->
+<div class="heading">This is front end example</div>
+
+<a href="./main.html" class="main">Main</a>
+
+<a href="./index.html">Server</a>
+<a href="1/index.html">Server 1 </a>
+<h1>HEading</h1>
+<div>
+    <h1 class="textContainer">Text</h1>
+    <h2 class="h2Container">h2 text</h2>
+</div>
+<p></p>
+<div class="sibling">
+    Sibling
+</div>
+<button onclick="hide()">hide</button>
+<button onclick="show()">show</button>
+
+<style>
+div h1 {
+    font-size: 48px;
+}
+div + .sibling {
+    color: blue;
+}
+</style>
+<script>
+function hide() {
+    document.querySelector(".textContainer").style.display = 'none';
+}
+function show() {
+    document.querySelector(".textContainer").style.display = '';
+}
+</script>
+<!-- <script src="./index.js"></script> -->
+<style>
+    /** to give relative sizing, we use em
+    rem to refer to body as base, generally 16px = 1 rem
+
+
+    */
+    h1.textContainer{
+        font-size: 2rem;
+
+        padding: 50px;
+        margin: 100px;
+        border: 1px solid green;
+    }
+    h2.h2Container {
+        font-size: 1rem;
+    }
+</style>
