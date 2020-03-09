@@ -1,0 +1,34 @@
+<div class="gridWrapper">
+<div></div>
+<div></div>
+<div></div>
+<div class="flexDiv">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</div>
+
+
+<style>
+
+    .gridWrapper {
+        display:grid;
+        grid-template-columns: 300px 100px;
+        grid-template-rows: 200px 400px;
+        
+    }
+    .gridWrapper div {
+            border: 1px solid red;
+    }
+    .flexDiv {
+        display: flex;
+        align-items: center;
+    }
+    .flexDiv div {
+        border: 1px solid blue;
+        width: 20px;
+        height: 50px;
+    }
+
+</style>

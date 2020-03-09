@@ -11,6 +11,8 @@ main.addEventListener("click", function() {
 fetch('http://localhost:8081/data.json').then(response => {
   debugger;
   console.log(response);
+
+
 })
 
 

@@ -1,0 +1,18 @@
+<form name="my" action="http://localhost:3004/api/detail" method="POST"  enctype="multipart/form-data">
+    <input name="ControlA" value="1">
+    <input name="ControlB" value="2">
+    <input name="ControlC" value="3"><br/>
+    <input type="file">Upload a file</input>
+    <br />
+    <br />
+    <button type="submit">Submit details</button>
+  </form>
+  
+  <script>
+    // get the form
+    let form = document.forms.my; // <form name="my"> element
+  
+    // get the element
+    let elem = form.elements.one; // <input name="one"> element
+  
+  </script>
