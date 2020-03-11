@@ -1,7 +1,10 @@
 <div class="gridWrapper">
 <div></div>
 <div></div>
-<div></div>
+<div style="position: relative; display: flex">
+    <img src="img/a.jpeg" style="width: 30%;"/>
+    <img src="img/a.jpeg" style="width: 30%;"/>
+</div>
 <div class="flexDiv">
     <div></div>
     <div></div>
@@ -14,7 +17,7 @@
 
     .gridWrapper {
         display:grid;
-        grid-template-columns: 300px 100px;
+        grid-template-columns: 20% 100px;
         grid-template-rows: 200px 400px;
         
     }
@@ -32,3 +35,10 @@
     }
 
 </style>
+
+
+ways of making responsive are 
+media queries
+widht in %,
+
+display: flex also gives responsiveness
