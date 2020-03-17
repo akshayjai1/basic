@@ -2,3 +2,22 @@
   background-color: yellow;
   color: blue;
 }
+
+
+@media screen and (max-width: 560px) {
+  body {
+    background-color: red;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+ body {
+   background-color: orange;
+ } 
+}

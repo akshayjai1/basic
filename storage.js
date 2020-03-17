@@ -14,13 +14,27 @@ const liMaker = (text) => {
 }
 
 form.addEventListener('submit', function (e) {
-  e.preventDefault();
+      e.preventDefault();
 
   itemsArray.push(input.value);
   sessionStorage.setItem('items', JSON.stringify(itemsArray));
   document.cookie
   liMaker(input.value);
   input.value = "";
+    const hiddenValue =  document.querySelector('#hiddenInput').value;
+    fetch('http://localhost:3005/hidden',{
+        method: 'post',
+        body: JSON.stringify({
+            hiddenValue
+        })
+      }).then(res => {
+          debugger;
+          return res.text()
+      }).then(res => {
+          debugger;
+          console.log(res);
+      })
+//   return true;
 });
 
 data.forEach(item => {
