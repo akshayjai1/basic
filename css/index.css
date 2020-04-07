@@ -2,11 +2,19 @@
   background-color: yellow;
   color: blue;
 }
+h1.textContainer {
+  font-size: 2rem;
+  padding: 50px;
+  margin: 100px;
+  border: 1px solid green;
+}
+h2.h2Container {
+  font-size: 1rem;
+}
 
-
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 1200px) {
   body {
-    background-color: red;
+    background-color: orange;
   }
 }
 
@@ -16,8 +24,23 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
- body {
-   background-color: orange;
- } 
+@media screen and (max-width: 560px) {
+  body {
+    background-color: red;
+  }
+}
+
+div.gridWrapper {
+  display: grid;
+  width: 600px;
+  height: 500px;
+  background-color: green;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  grid-template-rows: 200px 300px;
+  grid-template-areas:
+    "a b c cc"
+    "d e f ff";
+}
+.first {
+  grid-area: e;
 }
