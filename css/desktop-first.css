@@ -1,3 +1,9 @@
+/**
+Desktop-first
+< 1200px
+< 800px
+< 560px
+*/
 @media screen and (max-width: 1200px) {
   body {
     background-color: orange;
