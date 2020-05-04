@@ -1,0 +1,24 @@
+// @use 'normalize';
+@use 'button';
+@use 'mid';
+
+@use "normalize" as n;
+
+.useButton {
+  color: red;
+  //   @include mix-button(13px);
+  @include button.mix-button(13px);
+  // @include button._fix-button(13px);
+}
+
+.form {
+  @include mid.mix-form(red);
+}
+
+.new {
+  @include n.mix-norm;
+}
+
+.new-use {
+  @include mid.mix-form(red);
+}

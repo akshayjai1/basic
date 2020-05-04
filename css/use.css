@@ -1,0 +1,51 @@
+button {
+  color: red;
+  font-size: 13px;
+}
+
+form {
+  border: 1px solid green;
+}
+
+/**
+you cannot use mix-form without @use
+*/
+button.mid {
+  background-color: red;
+  height: 400px;
+  width: 400px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+.useButton {
+  color: red;
+  font-size: 13px;
+}
+
+.form {
+  background-color: red;
+  height: 400px;
+  width: 400px;
+}
+
+.new {
+  border: 1px solid orange;
+}
+
+.new-use {
+  background-color: red;
+  height: 400px;
+  width: 400px;
+}
+
+/*# sourceMappingURL=use.css.map */

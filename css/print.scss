@@ -1,0 +1,22 @@
+@media screen {
+  p.bodyText {
+    font-family: verdana, arial, sans-serif;
+    height: 400px;
+    width: 400px;
+    border: 1px solid red;
+  }
+}
+
+@media print {
+  p.bodyText {
+    font-family: georgia, times, serif;
+    height: 400px;
+    width: 400px;
+    border: 1px solid green;
+  }
+}
+@media screen, print {
+  p.bodyText {
+    font-size: 10pt;
+  }
+}

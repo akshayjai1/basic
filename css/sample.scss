@@ -1,0 +1,51 @@
+$re: #f00;
+:root {
+  --r: #0f0;
+  --f: 13px;
+}
+body {
+  color: $re;
+  background-color: var(--r);
+  font-size: var(--f);
+}
+
+@function makelongshadow($color) {
+  $val: 0px 0px $color;
+  @for $i from 1 through 2 {
+    /** example of string concatenation*/
+    $val: #{$val}, #{$i}px #{$i}px #{$color};
+  }
+  @return $val;
+}
+
+@mixin longshadow($color) {
+  text-shadow: makelongshadow($color);
+}
+
+h1 {
+  @include longshadow(lighten($re, 20%));
+}
+
+/** example of @extend */
+.error:hover {
+  background-color: #fee;
+}
+.d:visited {
+  color: red;
+}
+.d {
+  color: green;
+}
+.error--serious {
+  @extend .error;
+
+  @extend .d;
+  border-width: 3px;
+}
+
+.content nav.sidebar {
+  @extend .info;
+}
+.info {
+  background-color: #dee9fc;
+}

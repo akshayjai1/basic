@@ -1,0 +1,9 @@
+form {
+  border: 1px solid green;
+}
+
+@mixin mix-form($color) {
+  background-color: $color;
+  height: 400px;
+  width: 400px;
+}

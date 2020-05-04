@@ -1,0 +1,8 @@
+@forward 'form';
+@use 'form';
+/**
+you cannot use mix-form without @use
+*/
+button.mid {
+  @include form.mix-form(red);
+}

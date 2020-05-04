@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>delegation example page</title>
+    <link href="../css/event-delegation.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Event Delegation example using table</h1>
+    <div class="container">
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+      <div class="cell">cell</div>
+    </div>
+  </body>
+  <script>
+    let makeEditable = function (event) {
+      console.log(this);
+      debugger;
+      if (event.target.className === "cell") {
+        event.target.contentEditable = true;
+      }
+      console.log(event);
+    };
+    document
+      .querySelector(".container")
+      .addEventListener("click", makeEditable);
+
+    document.querySelector(".cell").addEventListener("click", function () {
+      alert("hi");
+    });
+  </script>
+  <!-- <script src="../js/event-delegation.js" /> -->
+</html>

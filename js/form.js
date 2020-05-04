@@ -17,3 +17,28 @@ let elem = form.elements.one;
         }
     }
  }
+
+
+ async function test() {
+
+console.log('hi');
+let x = new Promise((resolve, reject) => {
+    setTimeout(() => {
+console.log('timer');
+reject();
+});
+
+});
+console.log('end of function');
+
+try {
+ await x;
+
+let second = function() {console.log('second');}
+second();
+} catch() {
+const errorFn = () => {console.log('error occurred');}
+errorFn();
+}
+
+}

@@ -1,18 +1,11 @@
-<style>
-  .main {
-    color: orange;
-  }
-</style>
-<link href="../css/index.css" rel="stylesheet" />
-<title>a very basic html page</title>
-<!-- 
+<head>
+  <link href="../css/index.css" rel="stylesheet" />
+  <title>a very basic html page</title>
+</head>
+<body>
+  <!-- 
 <div class="heading">This is front end example</div>
 
-<a href="./main.html" class="main">Main</a>
-
-<a href="./index.html">Server</a>
-<a href="1/index.html">Server 1 </a>
-<h1>HEading</h1>
 <div>
   <h1 class="textContainer">Text</h1>
   <h2 class="h2Container">h2 text</h2>
@@ -23,39 +16,16 @@
 </div>
 <button onclick="hide()">hide</button>
 <button onclick="show()">show</button> -->
-
-<div class="gridWrapper">
-  <div class="first">text of first block</div>
-  <div class="first1">text of first block</div>
-  <div class="first2">text of first block</div>
-  <div class="first3">text of first block</div>
-  <div class="first4">text of first block</div>
-  <div class="first5">text of first block</div>
-  <div class="first6">text of first block</div>
-  <div class="first7">text of first block</div>
-</div>
-
-<style>
-  div h1 {
-    font-size: 48px;
-  }
-  div + .sibling {
-    color: blue;
-  }
-</style>
-<script>
-  function hide() {
-    document.querySelector(".textContainer").style.display = "none";
-  }
-  function show() {
-    document.querySelector(".textContainer").style.display = "";
-  }
-</script>
-<!-- <script src="./index.js"></script> -->
-<style>
-  /** to give relative sizing, we use em
-    rem to refer to body as base, generally 16px = 1 rem
-
-
-    */
-</style>
+  <div id="replaced">Content to be Replaced</div>
+  <div class="gridWrapper">
+    <div class="first">text of first block</div>
+    <div class="first1">text of first block</div>
+    <div class="first2">text of first block</div>
+    <div class="first3">text of first block</div>
+    <div class="first4">text of first block</div>
+    <div class="first5">text of first block</div>
+    <div class="first6">text of first block</div>
+    <div class="first7">text of first block</div>
+  </div>
+</body>
+<script src="../js/index.js"></script>

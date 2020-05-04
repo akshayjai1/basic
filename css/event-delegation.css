@@ -1,0 +1,12 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[4];
+      grid-template-columns: repeat(4, 50px);
+}
+
+.container .cell {
+  width: 50px;
+  height: 30px;
+}
+/*# sourceMappingURL=event-delegation.css.map */

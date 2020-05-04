@@ -1,0 +1,10 @@
+@mixin mix-button($size) {
+  font-size: $size;
+}
+@mixin _fix-button($size) {
+  font-size: $size;
+}
+button {
+  color: red;
+  @include mix-button(13px);
+}
