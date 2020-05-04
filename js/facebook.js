@@ -1,22 +1,11 @@
 console.log("facebook");
-const data = [
-  {
-    name: "Harish",
-    comment: "Hi",
-  },
-  {
-    name: "Harish 1",
-    comment: "Hi 1",
-  },
-  {
-    name: "Harish 2",
-    comment: "Hi 2",
-  },
-  {
-    name: "Harish 3",
-    comment: "Hi 3",
-  },
-];
+var data = [];
+for (let i = 0; i < 500; i++) {
+  data.push({
+    name: ` ${i} Harish `,
+    comment: ` ${i} comment `,
+  });
+}
 const commentsNode = document.querySelector("#post #comments");
 function paintComment() {
   const commentString = data.map(getCommentString).join("");
@@ -31,11 +20,12 @@ function updateData() {
     name: "Harish 4",
     comment: "Hi 4",
   };
-  data.push(newComment);
+  data.unshift(newComment);
   return data;
 }
 function getNewCommentHTML() {
-  const newCom = updateData()[data.length - 1];
+  // const newCom = updateData()[data.length - 1];
+  const newCom = updateData()[0];
   return getCommentString(newCom);
 }
 function getHtmlNode(string) {
@@ -51,5 +41,6 @@ function updateComments2() {
   commentsNode.innerHTML = commentsNode.innerHTML + getNewCommentHTML();
 }
 function efficientUpdateComments() {
-  commentsNode.appendChild(getHtmlNode(getNewCommentHTML()));
+  commentsNode.prepend(getHtmlNode(getNewCommentHTML()));
+  // commentsNode.appendChild(getHtmlNode(getNewCommentHTML()));
 }
