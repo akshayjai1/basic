@@ -1,6 +1,6 @@
 console.log("facebook");
 var data = [];
-for (let i = 0; i < 500; i++) {
+for (let i = 0; i < 5000; i++) {
   data.push({
     name: ` ${i} Harish `,
     comment: ` ${i} comment `,
@@ -28,18 +28,27 @@ function getNewCommentHTML() {
   const newCom = updateData()[0];
   return getCommentString(newCom);
 }
+/**
+ * trick to convert html string to html node
+ * @param {} string
+ */
 function getHtmlNode(string) {
   const newNode = document.createElement("div");
-  newNode.innerHTML = getNewCommentHTML();
+  newNode.innerHTML = string;
   return newNode.firstChild;
 }
+/** type1  */
 function updateComments() {
   updateData();
   paintComment();
 }
+/** type2  */
+
 function updateComments2() {
-  commentsNode.innerHTML = commentsNode.innerHTML + getNewCommentHTML();
+  commentsNode.innerHTML = getNewCommentHTML() + commentsNode.innerHTML;
 }
+/** type3  */
+
 function efficientUpdateComments() {
   commentsNode.prepend(getHtmlNode(getNewCommentHTML()));
   // commentsNode.appendChild(getHtmlNode(getNewCommentHTML()));
