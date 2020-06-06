@@ -3,5 +3,6 @@
 	"editor.formatOnSave": true,
 	"prettier.disableLanguages": [
 		"markdown"
-	]
+	],
+	"deno.enable": false
 }
