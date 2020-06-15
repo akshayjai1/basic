@@ -1,5 +1,19 @@
 console.log("in file async code");
 const input = document.querySelector("[name=tweet]");
+function callServer() {
+  fetch("http://localhost:3007/apiTwitter")
+    .then((res) => res.json())
+    .then((res) => {
+      debugger;
+      console.log(res);
+      document.querySelector(".serverData").textContent = JSON.stringify(res);
+    })
+    .catch((err) => {
+      debugger;
+      console.log(err);
+    });
+}
+
 function postTweet() {
   console.log("hi");
   const text = input.value;
