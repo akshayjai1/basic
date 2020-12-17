@@ -18,11 +18,14 @@
   "bugs": {
     "url": "https://github.com/akshayjai1/basic/issues"
   },
+  "proxy": "http://localhost:3007",
   "homepage": "https://github.com/akshayjai1/basic#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-http-proxy": "^1.6.0",
+    "http-server": "^0.12.3",
     "jsonwebtoken": "^8.5.1",
     "ramda": "^0.27.0",
     "react-redux": "^7.2.0",

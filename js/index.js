@@ -1,13 +1,11 @@
-fetch("http://localhost:8081/data2.json")
+fetch('http://localhost:8081/data2.json')
   .then((response) => {
-    debugger;
     return response.json();
     console.log(response);
   })
   .then((res) => {
     setTimeout(() => {
-      debugger;
-      document.querySelector("#replaced").innerText = res.data2;
+      document.querySelector('#replaced').innerText = res.data2;
     }, 5000);
   });
 
